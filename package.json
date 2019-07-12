@@ -1,0 +1,26 @@
+{
+  "name": "30wears.app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel html/index.html",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build html/index.html",
+    "deploy": "npm run build && surge ./dist 30wears.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mtimofiiv/30wears.app.git"
+  },
+  "author": "mtimofiiv <git@fiiv.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtimofiiv/30wears.app/issues"
+  },
+  "homepage": "https://github.com/mtimofiiv/30wears.app#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3",
+    "surge": "^0.21.3"
+  }
+}
