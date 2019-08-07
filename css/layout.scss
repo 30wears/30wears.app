@@ -1,12 +1,207 @@
-.black-text {
-  color: black;
+.masthead {
+  @extend .no-gutters;
+
+  background-color: #85BBA125;
+  background-image: url('../public/masthead.png');
+  background-position: 688px center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  .container {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 370%;
+    line-height: 1.325;
+  }
+
+  p.lead {
+    font-weight: bold;
+    font-size: 125%;
+    padding: 25px 0;
+  }
+
+  .cta-button {
+    display: inline-block;
+    width: 200px;
+    opacity: 0.6;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .social-button {
+    color: $text;
+    display: inline-block;
+    background: inherit;
+    margin: 0 20px;
+
+    img {
+      position: relative;
+      top: 5px;
+      height: 20px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    background-image: url('../public/hanger.svg');
+    background-position: center bottom;
+  }
 }
 
-h1 {
+.wordmark {
   color: $primary;
+  font-size: 125%;
+  font-weight: bold;
+  margin: 0;
+
+  span {
+    color: $text;
+  }
 }
 
-.lead {
-  font-size: 120%;
-  margin-bottom: 50px;
+.header {
+  text-align: center;
+  font-size: 250%;
+  padding: 30px 0;
+
+  @media (max-width: 768px) {
+    font-size: 180%;
+  }
+}
+
+section.dark {
+  background-color: $text;
+  color: $alt-background;
+
+  h2 {
+    color: $primary;
+    font-size: 400%;
+    padding-top: 55px;
+
+    span {
+      color: $alt-background;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 200%;
+    }
+  }
+
+  p {
+    width: 60%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  blockquote {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    position: relative;
+    top: -70px;
+
+    &::before, &::after {
+      font-family: serif;
+      font-size: 600%;
+      color: #D69082;
+      position: relative;
+      top: 75px;
+    }
+
+    &::before {
+      content: '“';
+      left: -20px;
+    }
+
+    &::after {
+      content: '”';
+      right: -20px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 120%;
+      top: 0;
+      padding: 50px 0;
+
+      &::before, &::after {
+        font-size: 250%;
+        top: 20px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+.garment-problem {
+  figure {
+    box-shadow: 10px 10px 0 $primary;
+    width: 90%;
+    margin: 0 auto;
+    height: 300px;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin: 0 auto 50px auto;
+  }
+}
+
+.maker {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+
+  figure {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 67px;
+    border: 1px solid $text;
+  }
+
+  div {
+    padding-left: 12px;
+    flex-grow: 1;
+
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  h3 {
+    font-size: 110%;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
