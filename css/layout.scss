@@ -1,3 +1,9 @@
+.primary-text { color: $primary; }
+
+section.gray-bg {
+  background-color: $alt-background;
+}
+
 .masthead {
   @extend .no-gutters;
 
@@ -78,6 +84,10 @@
   }
 }
 
+section.problems {
+  margin-bottom: 100px;
+}
+
 section.dark {
   background-color: $text;
   color: $alt-background;
@@ -99,6 +109,7 @@ section.dark {
   p {
     width: 60%;
     margin: 0 auto;
+    padding: 15px 0;
 
     @media (max-width: 768px) {
       text-align: center;
@@ -203,5 +214,28 @@ section.dark {
     font-size: 100%;
     padding: 0;
     margin: 0;
+  }
+}
+
+.naughty-list-header {
+  font-size: 150%;
+}
+
+.naughty-list {
+  font-size: 160%;
+  font-weight: bold;
+  list-style-type: none;
+
+  li {
+    color: #D69082;
+    text-align: center;
+    padding: 50px 0;
+
+    span {
+      color: black;
+      font-size: 120%;
+      position: relative;
+      top: 2px;
+    }
   }
 }
